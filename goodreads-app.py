@@ -10,11 +10,11 @@ features = st.beta_container()
 data_analysis = st.beta_container()
 
 #load images
-firstpix = Image.open('/Users/olatunde/Desktop/goodreads/data/book-header.jpeg')
+firstpix = Image.open('/Users/olatunde/Desktop/goodreads/book-header.jpeg')
 #ravecla = Image.open('/Users/olatunde/Desktop/goodreads/data/ravenclaw.gif')
 
 #datasets
-df = pd.read_csv('/Users/olatunde/Desktop/goodreads/data/Books_universe.csv')
+df = pd.read_csv('/Users/olatunde/Desktop/goodreads/Books_universe.csv')
 
 #sidebar settings
 st.sidebar.header('Team Ravenclaw')
@@ -46,7 +46,7 @@ with header:
     	#Please select a page:''')
 
 with dataset:
-    df = pd.read_csv('/Users/olatunde/Desktop/goodreads/data/Books_universe.csv')
+    df = pd.read_csv('/Users/olatunde/Desktop/goodreads/Books_universe.csv')
     df = df.drop(columns=['Unnamed: 0'])
     df.rename(columns={'publish_year':'pub_year', 'num_pages': 'num_pages'}, inplace=True)
     st.markdown("![Data](https://media4.giphy.com/media/xT9C25UNTwfZuk85WP/200.webp?cid=ecf05e47844brv5239cczg9hqo5ernebyirvx4xaua7k2dk8&rid=200.webp&ct=g)")
